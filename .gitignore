@@ -1,0 +1,26 @@
+# Exclude audio-flux-page
+audio-flux-page/
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Environment files
+.env
+.env.local
+**/.env
+**/.env.local
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

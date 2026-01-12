@@ -1,0 +1,18 @@
+# Render.com configuration for Frontend
+services:
+  - type: web
+    name: audioflux-frontend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
+      - key: NEXT_PUBLIC_BOT_USERNAME
+        sync: false
+    autoDeploy: true

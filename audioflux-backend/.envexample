@@ -1,0 +1,65 @@
+# -------------------------------
+# SERVER CONFIG
+# -------------------------------
+PORT=10000
+BACKEND_URL=https://your-backend-api.com/
+WEBHOOK_URL=https://your-backend-api.com/
+WEB_PLAYER_URL=https://your-frontend-interface.com/
+FRONTEND_URL=https://your-frontend-interface.com/
+
+# -------------------------------
+# TELEGRAM BOT
+# -------------------------------
+BOT_TOKEN=your_bot_token_from_botfather
+TELEGRAM_SECRET=your_telegram_web_app_secret
+
+# -------------------------------
+# UPSTASH REDIS (DIRECT TLS MODE)
+# MUST BE rediss:// NOT redis://
+# -------------------------------
+REDIS_URL=rediss://default:your_password@your_host.upstash.io:6379
+
+# -------------------------------
+# SAAVN API
+# -------------------------------
+API_URL=https://your-saavn-api.vercel.app/api/
+GENIUS_TOKEN=your_genius_access_token
+
+# -------------------------------
+# YOUTUBE API (Custom Provider)
+# -------------------------------
+YOUTUBE_API_KEY=your_youtube_api_key_here
+YOUTUBE_API_URL=your_youtube_api_url_here/api/youtube
+YOUTUBE_API_BASE=your_youtube_api_base_url_here
+
+# -------------------------------
+# SPOTIFY API (Optional - for metadata enrichment)
+# Get credentials from: https://developer.spotify.com/dashboard
+# -------------------------------
+SPOTIFY_CLIENT_ID=your_spotify_client_id
+SPOTIFY_CLIENT_SECRET=your_spotify_client_secret
+
+# -------------------------------
+# BOT CONFIGS
+# -------------------------------
+OWNER_ID=your_telegram_user_id
+LOGGER_GROUP_ID=your_logger_group_id
+BOT_USERNAME=YourBotUsername
+SUPPORT_CHANNEL=https://t.me/your_channel
+SUPPORT_CHAT=https://t.me/your_chat
+START_IMAGE=https://your-image-url.com/start.jpg
+DADDY_IMAGE=https://your-image-url.com/daddy.jpg
+DEFAULT_LANG=en
+
+# -------------------------------
+# HEROKU API (for health monitoring)
+# Get API key from: https://dashboard.heroku.com/account
+# -------------------------------
+HEROKU_API_KEY=your_heroku_api_key_here
+HEROKU_BACKEND_APP=your_heroku_backend_app_name
+HEROKU_FRONTEND_APP=your_heroku_frontend_app_name
+
+# -------------------------------
+# DEBUG & LOGGING
+# -------------------------------
+DEBUG_LOGS=true

@@ -1,0 +1,32 @@
+{
+    "name": "audioflux-frontend",
+    "description": "AudioFlux - Premium Music Player Frontend (Next.js)",
+    "repository": "https://github.com/yourusername/audioflux",
+    "logo": "",
+    "keywords": [
+        "nextjs",
+        "music",
+        "player",
+        "telegram"
+    ],
+    "env": {
+        "NODE_ENV": {
+            "description": "Node environment",
+            "value": "production",
+            "required": true
+        },
+        "NEXT_PUBLIC_API_URL": {
+            "description": "Backend API URL",
+            "required": true
+        },
+        "NEXT_PUBLIC_BOT_USERNAME": {
+            "description": "Telegram bot username",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ]
+}

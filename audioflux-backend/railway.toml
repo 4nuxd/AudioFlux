@@ -1,0 +1,31 @@
+# Railway.app configuration for Backend (Node.js + Telegram Bot)
+[build]
+builder = "NIXPACKS"
+buildCommand = "npm install --production"
+
+[deploy]
+startCommand = "node server.js"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+[[services]]
+name = "audioflux-backend"
+
+[services.healthcheck]
+path = "/ping"
+timeout = 100
+interval = 60
+
+# Environment variables (set these in Railway dashboard)
+# BOT_TOKEN
+# REDIS_URL
+# PORT
+# WEBHOOK_URL
+# FRONTEND_URL
+# WEB_PLAYER_URL
+# API_URL
+# OWNER_ID
+# SUPPORT_CHANNEL
+# SUPPORT_CHAT
+# START_IMAGE
+# LOGGER_GROUP_ID

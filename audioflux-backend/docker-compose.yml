@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - REDIS_URL=redis://redis:6379
+      - API_URL=${API_URL}
+      - WEBHOOK_URL=${WEBHOOK_URL}
+      - TELEGRAM_SECRET=${TELEGRAM_SECRET}
+      - BACKEND_URL=${BACKEND_URL}
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"

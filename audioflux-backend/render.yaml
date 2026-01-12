@@ -1,0 +1,38 @@
+# Render.com configuration for Backend
+services:
+  - type: web
+    name: audioflux-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install --production
+    startCommand: node server.js
+    healthCheckPath: /ping
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: PORT
+        value: 3001
+      - key: WEBHOOK_URL
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: WEB_PLAYER_URL
+        sync: false
+      - key: API_URL
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: SUPPORT_CHANNEL
+        sync: false
+      - key: SUPPORT_CHAT
+        sync: false
+      - key: START_IMAGE
+        sync: false
+      - key: LOGGER_GROUP_ID
+        sync: false
+    autoDeploy: true

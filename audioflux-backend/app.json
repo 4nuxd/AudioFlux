@@ -1,0 +1,83 @@
+{
+    "name": "audioflux-backend",
+    "description": "AudioFlux - Premium Music Player Backend with Telegram Bot",
+    "repository": "https://github.com/yourusername/audioflux",
+    "logo": "",
+    "keywords": [
+        "telegram",
+        "music",
+        "bot",
+        "nodejs",
+        "express"
+    ],
+    "env": {
+        "NODE_ENV": {
+            "description": "Node environment",
+            "value": "production",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Telegram bot token from @BotFather",
+            "required": true
+        },
+        "BOT_USERNAME": {
+            "description": "Telegram bot username",
+            "required": false
+        },
+        "REDIS_URL": {
+            "description": "Redis connection URL (Upstash or other)",
+            "required": true
+        },
+        "PORT": {
+            "description": "Server port",
+            "value": "3001",
+            "required": false
+        },
+        "WEBHOOK_URL": {
+            "description": "Webhook URL for Telegram bot",
+            "required": false
+        },
+        "FRONTEND_URL": {
+            "description": "Frontend application URL",
+            "required": false
+        },
+        "WEB_PLAYER_URL": {
+            "description": "Web player URL",
+            "required": false
+        },
+        "API_URL": {
+            "description": "Saavn API base URL",
+            "required": false
+        },
+        "OWNER_ID": {
+            "description": "Telegram owner user ID",
+            "required": false
+        },
+        "SUPPORT_CHANNEL": {
+            "description": "Support channel username",
+            "required": false
+        },
+        "SUPPORT_CHAT": {
+            "description": "Support chat username",
+            "required": false
+        },
+        "START_IMAGE": {
+            "description": "Start command image URL",
+            "required": false
+        },
+        "LOGGER_GROUP_ID": {
+            "description": "Logger group ID for bot logs",
+            "required": false
+        },
+        "DEFAULT_LANG": {
+            "description": "Default language code",
+            "value": "en",
+            "required": false
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/nodejs"
+        }
+    ]
+}
